@@ -5,7 +5,5 @@ phases:
       - export BUCKET=lambdaprojectnew1
       - sam package --template-file template.yaml --s3-bucket $BUCKET --output-template-file outputtemplate.yaml
 artifacts:
-  type: zip
   files:
-    - template.yaml
     - outputtemplate.yaml
