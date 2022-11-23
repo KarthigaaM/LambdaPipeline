@@ -3,7 +3,8 @@ phases:
   build:
     commands:
       - export BUCKET=lambdaprojectnew1
-      - sam build --template-file template.yaml --s3-bucket $BUCKET --output-template-file outputtemplate.yaml
+      - sam package --template-file template.yaml --s3-bucket $BUCKET --output-template-file outputtemplate.yaml
+      - sam build --template-file template.yaml
 artifacts:
   files:
     - outputtemplate.yaml
